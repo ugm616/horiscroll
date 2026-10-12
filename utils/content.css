@@ -1,0 +1,67 @@
+/* Ox Alpha Scroll — injected UI styles */
+
+/* Floating scrollbar */
+.oxalpha-hscrollbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background: rgba(30, 30, 40, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2147483647;
+  cursor: pointer;
+}
+
+.oxalpha-hscrollbar.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.oxalpha-hscrollbar-thumb {
+  position: absolute;
+  top: 1px;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #7b61ff, #5a3fd8);
+  min-width: 30px;
+  cursor: grab;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.oxalpha-hscrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8f74ff, #6a4fe8);
+}
+
+.oxalpha-hscroll {
+  cursor: grabbing;
+}
+
+.oxalpha-hscrollbar-thumb:focus-visible {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #7b61ff;
+}
+
+/* Highlight overlay */
+.oxalpha-highlight {
+  outline: 2px dashed #7b61ff !important;
+  outline-offset: -2px;
+  background-color: rgba(123, 97, 255, 0.12) !important;
+}
+
+/* Detection banner */
+.oxalpha-highlight-banner {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e1e28;
+  color: #fff;
+  font: 13px/1.4 system-ui, sans-serif;
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 2147483647;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}

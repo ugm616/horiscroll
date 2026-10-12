@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ox Alpha Scroll — Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>⚙️ Ox Alpha Scroll</h1>
+      <p>Manage which sites horizontal scrolling is enabled on.</p>
+    </header>
+
+    <section class="card">
+      <h2>Add a site</h2>
+      <form id="addForm">
+        <input id="siteInput" type="text" placeholder="e.g. example.com" autocomplete="off" />
+        <button type="submit" class="btn primary">Add</button>
+      </form>
+      <p class="err" id="err"></p>
+    </section>
+
+    <section class="card">
+      <h2>Allowed sites <span id="count"></span></h2>
+      <ul id="siteList" class="site-list"></ul>
+      <p class="empty" id="empty">No sites added yet.</p>
+    </section>
+
+    <section class="card">
+      <h2>Behavior</h2>
+      <label class="row">
+        <input type="checkbox" id="shiftWheel" /> Shift + mouse wheel scrolls horizontally
+      </label>
+      <label class="row">
+        <input type="checkbox" id="showBar" /> Show floating scrollbar
+      </label>
+      <button id="saveBehavior" class="btn primary">Save behavior</button>
+    </section>
+
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+
+    <footer>
+      <p>Shortcut: hold <kbd>Shift</kbd> + scroll wheel to scroll sideways.</p>
+    </footer>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>
+

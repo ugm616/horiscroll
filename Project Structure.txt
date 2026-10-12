@@ -1,0 +1,20 @@
+/extension
+│
+├── manifest.json
+├── background.js
+├── content.js
+├── content.css
+├── popup.html
+├── popup.js
+├── popup.css
+├── options.html
+├── options.js
+├── options.css
+├── utils/
+│   └── storage.js
+├── icons/
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+└── README.md

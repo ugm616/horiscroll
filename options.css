@@ -1,0 +1,114 @@
+:root {
+  --bg: #121218;
+  --card: #1e1e28;
+  --text: #ececf2;
+  --muted: #9a9aac;
+  --accent: #7b61accent-2: #5a3fd8;
+  --danger: #ff5f6b;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font: 15px/1.5 system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+header h1 { font-size: 22px; margin-bottom: 4px; }
+header p { color: var(--m: 20px; }
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.card h2 { font-size: 15px; margin-bottom: 12px; }
+.card h2 span { color: var(--muted); font-weight: 400; }
+
+form {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #35354a;
+  border-radius: 10px;
+  background: #16161f;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+input[type="text"]:focus { border-color: var(--accent); }
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+.btn:hover { filter: brightness(1.15); }
+.btn.primary { background: var(--accent); color: #fff; }
+
+.err { color: var(--danger); font-size: 13px; margin-top: 8px; min-height: 18px; }
+
+.site-list { list-style: none; }
+.site-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: 8px;
+}
+.site-item:nth-child(odd) { background: #26263330; }
+.site-name { flex: 1; font-family: ui-monospace, monospace; font-size: 13.5px; }
+
+.icon-btn {
+  width: 30px; height: 30px;
+  border: none;
+  border-radius: 8px;
+  background: #2e2e3c;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+.icon-btn:hover { background: #3a3a4c; }
+.icon-btn.danger:hover { background: var(--danger); color: #fff; }
+
+.empty { color: var(--muted); font-size: 13px; }
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+.row input { accent-color: var(--accent); width: 17px; height: 17px; }
+#saveBehavior { margin-top: 12px; }
+
+.status { min-height: 20px; font-size: 13px; text-align: center; }
+.status.ok { color: #7ddb8a; }
+
+footer { margin-top: 24px; color: var(--muted); font-size: 13px; text-align: center; }
+kbd {
+  background: #2e2e3c;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: ui-monospace, monospace;
+}
